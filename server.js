@@ -25,8 +25,8 @@ app.post('/publisher', function (req, res) {
   });
 });
 
-app.delete('/publisher/:_id', function (req, res) {
-  var id = req.params.id;
+app.delete('/publisher/:name', function (req, res) {
+  var id = req.params.name;
   console.log(id);
   db.publisher.remove({_id: mongojs.ObjectId(id)}, function (err, doc) {
     res.json(doc);
