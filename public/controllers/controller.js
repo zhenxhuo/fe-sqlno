@@ -23,7 +23,7 @@ $scope.addContact = function() {
 
 $scope.remove = function(name) {
   console.log(name);
-  $http.delete('/publisher/' + id).success(function(response) {
+  $http.delete('/publisher/' + name).success(function(response) {
     refresh();
   });
 };
